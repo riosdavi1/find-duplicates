@@ -1,0 +1,44 @@
+plugins {
+	id 'application'
+}
+
+apply plugin : "java" 
+ext {
+   javaMainClass = "com.compass.findduplicates.Application"
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+group = 'com.compass'
+version = '0.0.1'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.apache.poi:poi-ooxml:5.3.0'
+	testImplementation "org.junit.jupiter:junit-jupiter:5.10.0"
+	testImplementation "org.mockito:mockito-junit-jupiter:4.1.0"
+	testImplementation 'org.hamcrest:hamcrest:2.1'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+test {
+    testLogging {
+       events "failed", "passed", "skipped"
+    }
+}
+
+reporting.baseDir = "reports"
