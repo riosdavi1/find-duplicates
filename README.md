@@ -1,7 +1,7 @@
 # Find-Duplicates
 
 
-## Getting started
+### Getting started
 
 This application reads contacts from an Excel file and returns a list of duplicate contact Id's and the matching accuracy.
 The accuracy is based on the following criteria:
@@ -11,13 +11,13 @@ The accuracy is based on the following criteria:
 > **Important**: the complexity is O(n^2) because contacts cannot be sorted on any combination of fields that can guarantee that duplicate contacts are adjacent (zipCode and address can be empty and email can be different for duplicate contacts).
 
 
-## Build application
+### Build application
 
 ```sh
 ./gradlew clean build
 ```
 
-## Run tests
+### Run tests
 
 ```sh
 ./gradlew clean test
@@ -36,7 +36,7 @@ ContactDuplicateFinderTest > testFindWithDuplicateContactsSameEmailLowAccuracy()
 BUILD SUCCESSFUL in 4s
 ```
 
-## Run application
+### Run application
 
 To execute the application, pass the location and name of the input Excel file. Example:
 
@@ -74,3 +74,7 @@ Comparing: Contact [id=1, firstName=Ciara, lastName=French, email=mollis.lectus.
 Comparing: Contact [id=1, firstName=Ciara, lastName=French, email=mollis.lectus.pede@outlook.net, zipCode=39746, address=449-6990 Tellus. Rd.] to Contact [id=4, firstName=Paul, lastName=Gaines, email=quis.diam@aol.couk, zipCode=95904, address=735-3498 Magna. Street]
 ...
 ```
+
+### Author
+
+* David Rios: [GitHub](https://github.com/riosdavi1)|[LinkedIn](https://www.linkedin.com/in/riosdavid/)
